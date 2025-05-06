@@ -1,0 +1,23 @@
+= Launch a JavaFX Application from a non-JavaFX component
+
+== Abstract
+
+Most of the time the GUI application is the ultimate process: everything from collecting inputs, configurations, user operations, processing and output delivery happen during its runtime.
+
+This project is about the other cases, where you want the GUI to be a utility to help you in a workflow where processing depends on user input that the latter can more easily provide by working with a graphical interface. +
+e.g. you have a set of video files and you want to collect timestamps for each that would be used at a later step to trim those videofiles. A GUI utility instance would take one video file, display the video to the user and the user would be able to determine the necessary timestamps and report the results to the main applicaton.
+
+Specifically, JavaFX as a GUI Platform is well suited for the "utility GUI" concept described above.
+
+The solution herein is one possible implementation
+
+== Dependencies
+
+- JDK 11 or later
+- maven
+
+== Run
+
+----
+mvn exec:java "-Dexec.mainClass=com.example.Main"
+----
